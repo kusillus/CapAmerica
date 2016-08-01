@@ -1,20 +1,11 @@
-html{
+html {
 	font-size: 16px;
+	background: #1D1F20;
 	font-family: 'Exo 2', sans-serif;
 }
-body{
-	background: black;
-}
-.ca--container{
-	margin-top: 1rem;
-}
-.ca--text{
-	color: white;
-	text-align: center;
-	font-size: 2rem;
-	margin-top: 0.5rem
-}
-.ca--base-shield{
+
+/*Base del escudo*/
+.shield {
 	width: 17rem;
 	height: 17rem;
 	background: #E8E6E7;
@@ -23,34 +14,49 @@ body{
 	align-items: center;
 	border-radius: 50%;
 	border: solid #AD3332 2rem;
-	margin: 0 auto;
-	}
-.ca--base-star{
+	margin: 2rem auto 0 auto;
+}
+
+/*Contenedor Estrella*/
+.shield__container {
 	background: #355675;
 	width: 8.5rem;
 	height: 8.5rem;
 	border-radius: 50%;
 	border: solid #AD3332 2rem;
 }
-.ca--star, .ca--star::before, .ca--star::after{
-	width: 0;
-	border-color: transparent transparent #E8E6E7 transparent;
-	border-width: 0 4rem 2.5rem 4rem;
-	border-style: solid;
-	transform: rotate(180deg);
-	margin-top: 2.75rem;
-	position: absolute;
-	margin-left: 0.25rem;
+
+/*Estrella*/
+.container__star,
+.container__star::before,
+.container__star::after {
+    border-color: transparent transparent #fff transparent;
+    border-width: 0 4rem 2.5rem 4rem;
+    border-style: solid;
+    position: absolute;
+    transform: rotate(180deg);
+    margin-top: 2.75rem;
+    margin-left: 0.25rem;
 }
-.ca--star::before{
+
+.container__star::before {
 	content: '';
 	margin-top: -0.15rem;
 	margin-left: -4.3rem;
 	transform: rotate(70deg);
 }
-.ca--star::after{
+
+.container__star::after {
 	content: '';
 	margin-top: -0.29rem;
 	margin-left: -3.87rem;
 	transform: rotate(-70deg);
+}
+
+/*Texto*/
+.shield-text {
+	color: white;
+	text-align: center;
+	font-size: 2rem;
+	margin-top: 1rem
 }
